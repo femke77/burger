@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
@@ -24,7 +24,8 @@ router.post("/api/burgers", (req, res) => {
 
 router.put("/api/burgers/:id", (req, res) => {
     var id = req.params.id;
-    //update to devoured with button click. 
+    //update to devoured with button click and reload to see 
+    //devoured = true on the right side grayed out
 
 });
 
