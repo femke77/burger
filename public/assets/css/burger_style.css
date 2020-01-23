@@ -1,21 +1,42 @@
 body {
     background-color: palegoldenrod;
+    font-size: 16pt;
 }
 
-h1 {
-    text-align: center;
-}
-
-.center {
+.center, .formStyle{
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
 
-  .burger {
-      background-color: papayawhip;
-  }
+.head {
+    margin-bottom: 50px;
+    text-align: center;
+}
 
-  .devourBtn {
-      
-  }
+.formStyle{
+    width: 60%;
+    text-align: center;
+    
+}
+
+.burger { 
+    background-color: papayawhip;
+}
+
+.devourBtn {
+    width: 80px;
+
+}
+
+#newBurgerBox {
+    width: 250px;
+}
+
+#addBtn{
+    margin-top: 20px;
+    background-color: lightgreen;
+    font-weight: bold;
+    width: 200px;
+    height: 25px;
+}

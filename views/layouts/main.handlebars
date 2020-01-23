@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,33 @@
     <title>Burgers!</title>
     <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
     <script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/assets/js/burgers.js"></script>
+    <script src="/assets/js/burgers.js"></script>
 </head>
+
 <body>
-    <h1>Eat da Burgers!!</h1>
-    
-    <img src="/assets/img/burger2ta.png" height='200' width='250' class="center">
-   
-    {{{body}}}
-    
+    <div class="head">
+        <h1>Eat da Burgers!!</h1>
+
+        <img src="/assets/img/burger2ta.png" height='200' width='250' class="center">
+
+
+
+        {{{body}}}
+
+
+        <div class="formStyle">
+            <h2>Add a Burger</h2>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="newBurger">Burger Name:</label>
+                    <input type="text" id="newBurgerBox" name="name">
+                </div>
+
+                <button type="submit" id="addBtn">Add Burger</button>
+            </form>
+        </div>
+
 </body>
+
 </html>

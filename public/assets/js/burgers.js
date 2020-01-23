@@ -1,0 +1,1 @@
+//ajax for post and put
