@@ -1,5 +1,13 @@
-<ul>
-  {{#each burgers}}
-    <li> {{this.burger_name}} </li>
-  {{/each}}
-</ul>
+
+{{#each burgers}}
+<div class="burgerAndBtn">
+   <div class="btn">
+    <button id="devBtn" class="devourBtn">Devour</button>
+  </div>
+  <div class="burger">
+    {{this.burger_name}}
+
+  </div>
+ 
+</div>
+{{/each}}

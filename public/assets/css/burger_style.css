@@ -17,20 +17,32 @@ body {
 .formStyle{
     width: 60%;
     text-align: center;
-    
+}
+
+.burgerAndBtn {
+    width: 50%;
+    height: 40px;
 }
 
 .burger { 
-    background-color: papayawhip;
+    background-color: oldlace;
+    height: 40px;
+    width: 450px;
+    margin: 10px 10px 10px 30px;
+}
+
+.btn {
+    float: right;
 }
 
 .devourBtn {
-    width: 80px;
-
+    width: 80px;  
+    background-color: lightgreen;
+    font-weight: bold;
 }
 
 #newBurgerBox {
-    width: 250px;
+    width: 350px;
 }
 
 #addBtn{
