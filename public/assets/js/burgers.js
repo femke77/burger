@@ -1,5 +1,6 @@
 $(function () {
 
+    //add a new burger
     $("#addBtn").on("click", (event) => {
         event.preventDefault();
 
@@ -7,6 +8,7 @@ $(function () {
             burger_name: $("#newBurgerBox").val().trim()
         }
 
+        //ajax post to create new burger in database
         $.post("/api/burgers", burger, () => {
             console.log("new burger created");
             location.reload();
@@ -14,15 +16,15 @@ $(function () {
 
     });
 
+    //eat a burger
     $(".devourBtn").on("click", function () {
         var id = $(this).attr("data-id");
-        console.log(`id is ${id}`)
-        console.log(this)
 
         var burger = {
             devoured: 1
         }
 
+        //put request to update a burger using its button data-id
         $.ajax({
             url: "/api/burgers/" + id,
             type: "PUT",

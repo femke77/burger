@@ -1,6 +1,7 @@
 const mysql = require("mysql");
 var connection;
 
+//if jaws db var found in process environment connect to it else connect to localhost 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -13,6 +14,7 @@ if (process.env.JAWSDB_URL) {
     })
 }
 
+//connect to db
 connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);
