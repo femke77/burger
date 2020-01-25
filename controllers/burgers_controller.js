@@ -22,7 +22,6 @@ router.post("/api/burgers", (req, res) => {
 
 });
 
-
 router.put("/api/burgers/:id", (req, res) => {
     var id = req.params.id;
     //"UPDATE ?? SET ?? = ? WHERE ?? = ?";
@@ -32,7 +31,7 @@ router.put("/api/burgers/:id", (req, res) => {
             return res.status(404).end();
         }
         res.status(200).end();
-    })
+    });
 
 
 });

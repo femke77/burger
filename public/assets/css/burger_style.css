@@ -3,19 +3,17 @@ body {
     font-size: 16pt;
 }
 
-
 .left {
-    width: 50%;
+    min-width: 40%;
+    min-height: 200px;
     float: left;
-
 }
 
 .right {
-    width: 50%;
+    width: 40%;
     float: left;
-
+    margin-left: 200px;
 }
-
 
 .formStyle{
     clear: both;
@@ -24,19 +22,13 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;
-    
+    padding: 30px;    
 }
-
 
 .head {
     margin-bottom: 50px;
     text-align: center;
 }
-
-
-
-
 
 .burgerAndBtn {
     clear:both;

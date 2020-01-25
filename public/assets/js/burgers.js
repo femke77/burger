@@ -3,7 +3,6 @@ $(function () {
     $("#addBtn").on("click", (event) => {
         event.preventDefault();
 
-
         var burger = {
             burger_name: $("#newBurgerBox").val().trim()
         }
@@ -35,7 +34,6 @@ $(function () {
                 location.reload();
             }
         );
-
     });
 
 
