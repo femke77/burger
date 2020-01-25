@@ -1,32 +1,28 @@
 <div class="left">
-{{#each burgers}}
-   {{#unless devoured}}
-     <div class="burgerAndBtn">
-        <div class="btn">
-           <button id="devBtn" class="devourBtn">Devour</button>
-        </div>
-        <div class="burger">
-           {{this.burger_name}}
-        </div>
-     </div>
-   {{/unless}}
-{{/each}}
+  {{#each burgers}}
+  {{#unless devoured}}
+  <div class="burgerAndBtn">
+    <div class="btn">
+      <button class="devourBtn" data-id="{{id}}">Devour</button>
+    </div>
+    <div class="burger">
+      {{id}} {{burger_name}}
+    </div>
+  </div>
+  {{/unless}}
+  {{/each}}
 </div>
 
 <div class="right">
-{{#each burgers}}
-   {{#if devoured}}
-     <div class="devoured">
-        <div class="burger">
-           {{this.burger_name}}
-        </div>
-     </div>
-   {{/if}}
-{{/each}}
+  {{#each burgers}}
+  {{#if devoured}}
+  <div class="devoured">
+    <div class="burger">
+      {{burger_name}}
+    </div>
+  </div>
+  {{/if}}
+  {{/each}}
 </div>
 
-
-{{!-- when devourbtn clicked, devoured = true, 
-
-then : all burgers with true for devoured are displayed 
-to the right of undevoured burgers and do not have a devour button--}}
+{{!when devourbtn clicked, devoured = true using a put router}}
