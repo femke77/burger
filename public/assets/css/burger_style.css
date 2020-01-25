@@ -3,24 +3,43 @@ body {
     font-size: 16pt;
 }
 
-.center, .formStyle{
+
+.left {
+    width: 50%;
+    float: left;
+
+}
+
+.right {
+    width: 50%;
+    float: left;
+
+}
+
+
+.formStyle{
+    clear: both;
+    width: 60%;
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
+    
 }
+
 
 .head {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.formStyle{
-    width: 60%;
-    text-align: center;
-}
+
+
+
 
 .burgerAndBtn {
-    width: 50%;
+    clear:both;
     height: 40px;
 }
 
@@ -51,4 +70,9 @@ body {
     font-weight: bold;
     width: 200px;
     height: 25px;
+}
+
+.devoured {
+    color: grey;
+  
 }
