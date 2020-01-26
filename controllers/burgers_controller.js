@@ -17,9 +17,14 @@ router.get("/", function (req, res) {
 
 //create a new burger in the database using the burger name sent in the request then redirect to home page
 router.post("/api/burgers", (req, res) => {
+    if (!req.body.burger_name) {
+        res.status("400").send("Burger name is required.")
+        return;
+    }
     burger.insertOne("burger_name", req.body.burger_name, function (result) {
         res.redirect("/");
-    })
+    });
+
 
 });
 
