@@ -18,7 +18,7 @@ router.get("/", function (req, res) {
 //create a new burger in the database using the burger name sent in the request then redirect to home page
 router.post("/api/burgers", (req, res) => {
     if (!req.body.burger_name) {
-        res.status("400").send("Burger name is required.")
+        res.status("400").send("Burger name is required.");
         return;
     }
     burger.insertOne("burger_name", req.body.burger_name, function (result) {
@@ -28,7 +28,7 @@ router.post("/api/burgers", (req, res) => {
 
 });
 
-//update (devour) a burger using its button data-id to set devoured = true
+//make sure a burger_name exists, then update (devour) a burger using its button data-id to set devoured = true
 router.put("/api/burgers/:id", (req, res) => {
     var id = req.params.id;
     burger.updateOne("devoured", 1, "id", id, function (result) {
@@ -38,8 +38,6 @@ router.put("/api/burgers/:id", (req, res) => {
         }
         res.status(200).end();
     });
-
-
 });
 
 module.exports = router;
