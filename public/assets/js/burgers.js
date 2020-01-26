@@ -4,15 +4,20 @@ $(function () {
     $("#addBtn").on("click", (event) => {
         event.preventDefault();
 
-        var burger = {
-            burger_name: $("#newBurgerBox").val().trim()
+        if ($("#newBurgerBox").val().length > 0) {
+            var burger = {
+                burger_name: $("#newBurgerBox").val().trim()
+            }
+
+            //ajax post to create new burger in database
+            $.post("/api/burgers", burger, () => {
+                console.log("new burger created");
+                location.reload();
+            });
+        } else {
+            alert("Burger name must be at least 1 character.")
         }
 
-        //ajax post to create new burger in database
-        $.post("/api/burgers", burger, () => {
-            console.log("new burger created");
-            location.reload();
-        });
 
     });
 
